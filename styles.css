@@ -1,95 +1,110 @@
-* {
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f7f9fc;
+    color: #333;
 }
 
-body {
-    font-family: 'Arial, sans-serif';
-    line-height: 1.6;
-}
-
+/* 헤더 스타일 */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-section {
-    padding: 2rem 0;
-    text-align: center;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-#home {
-    background: url('https://blog.kakaocdn.net/dn/L6oFx/btq5GeZ6vVD/p1WUESaUF3kgNdLex2zYR1/img.png') no-repeat center center/cover;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.project-card {
-    background: #f4f4f4;
-    padding: 1rem;
+/* 메인 컨텐츠 스타일 */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+main h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-form input, form textarea {
-    width: 80%;
-    padding: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+main p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-form button {
-    padding: 0.5rem 2rem;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #555;
-}
-
-footer {
-    background: #333;
-    color: #fff;
+.image-container {
     text-align: center;
-    padding: 1rem 0;
+}
+
+.image-container img {
+    max-width: 50%; /* 이미지 크기를 줄입니다 */
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: none;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    .image-container img {
+        max-width: 80%; /* 작은 화면에서 이미지 크기를 늘립니다 */
+    }
 }
