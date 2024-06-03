@@ -48,7 +48,7 @@ main {
 }
 
 main h2 {
-    color: hsl(122, 39%, 49%);
+    color: hsla(34, 84%, 62%, 0.226);
     font-size: 24px;
     margin-bottom: 10px;
 }
