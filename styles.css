@@ -9,8 +9,8 @@ body {
 
 /* 헤더 스타일 */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: hsla(34, 84%, 62%, 0.226);
+    color: rgb(255, 255, 255);
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -48,7 +48,7 @@ main {
 }
 
 main h2 {
-    color: #4CAF50;
+    color: hsl(122, 39%, 49%);
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -78,7 +78,7 @@ iframe {
 
 /* 푸터 스타일 */
 footer {
-    background-color: #4CAF50;
+    background-color: hsla(36, 100%, 82%, 0.973);
     color: white;
     text-align: center;
     padding: 10px 0;
