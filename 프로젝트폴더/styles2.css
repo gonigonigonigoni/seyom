@@ -11,24 +11,54 @@ body, html {
 
 .container {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hamster {
     width: 100px;
     height: 100px;
-    background: url('이세영.png') no-repeat center center / contain;
+    background: url('images/이세영.png') no-repeat center center / contain;
+    cursor: pointer;
+    position: relative;
+}
+
+.speech-bubble {
     position: absolute;
+    bottom: 140px; /* Adjust the position as needed */
+    width: 120px;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 100%; /* Arrow pointing upwards */
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    margin-top: -10px;
 }
 
 .heart {
     width: 50px;
     height: 50px;
-    background: url('이세영2.png') no-repeat center center / contain;
+    background: url('images/이세영2.png') no-repeat center center / contain;
     position: absolute;
     animation: float 4s infinite;
 }
