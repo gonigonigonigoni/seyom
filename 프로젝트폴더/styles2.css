@@ -17,8 +17,8 @@ body, html {
 }
 
 .rounded-box {
-    width: 400px; /* 성인 손바닥 크기 정도로 설정 */
-    height: 400px;
+    width: 200px; /* 성인 손바닥 크기 정도로 설정 */
+    height: 200px;
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 20px; /* 둥근 모서리 */
@@ -30,15 +30,15 @@ body, html {
 }
 
 .hamster {
-    width: 160px;
-    height: 160px;
+    width: 80px;
+    height: 80px;
     background: url('images/이세영.png') no-repeat center center / contain;
     cursor: pointer;
 }
 
 .speech-bubble {
     position: absolute;
-    bottom: 10px; /* 햄스터 위쪽에 위치 */
+    bottom: 50px; /* 햄스터 위쪽에 위치 */
     width: 120px;
     padding: 10px;
     background: #fff;
@@ -65,8 +65,8 @@ body, html {
 }
 
 .heart {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background: url('images/이세영2.png') no-repeat center center / contain;
     position: absolute;
     animation: float 4s infinite;
