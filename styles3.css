@@ -20,7 +20,7 @@ body, html {
 .rounded-box {
     width: 700px; /* 성인 손바닥 크기 정도로 설정 */
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정색 */
+    background-color: rgba(3, 3, 3, 0.5); /* 반투명 검정색 */
     border-radius: 20px; /* 둥근 모서리 */
     display: flex;
     flex-direction: column;
