@@ -4,7 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamster Care Tips</title>
-    <link rel="stylesheet" href="케어.css">
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* 바탕화면 스타일 */
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: hsla(34, 84%, 62%, 0.226);
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* 메인 컨텐츠 스타일 */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 150px auto 20px auto; /* 헤더 높이 + 여백만큼 아래로 위치 */
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        main h2 {
+            color: hsla(34, 84%, 62%, 0.226);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .article-container {
+            padding: 20px;
+        }
+
+        article h3 {
+            color: hsla(34, 84%, 62%, 0.626);
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        article ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        article ul li {
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        .buttons button {
+            background-color: hsla(34, 84%, 62%, 0.8);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: hsla(34, 84%, 62%, 1);
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: hsla(36, 100%, 82%, 0.973);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 반응형 스타일 */
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 10px;
+                margin: 120px 10px 10px 10px; /* 작은 화면에서도 헤더 높이만큼 아래로 위치 */
+            }
+
+            .buttons button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,17 +161,61 @@
         <section>
             <h2>Hamster Care Tips</h2>
             <p>Learn how to take proper care of your hamster with our essential care tips.</p>
-            <ul>
-                <li>Provide a spacious and clean cage.</li>
-                <li>Offer a balanced diet with fresh fruits and vegetables.</li>
-                <li>Ensure fresh water is always available.</li>
-                <li>Give your hamster plenty of exercise with wheels and toys.</li>
-                <li>Handle your hamster gently and regularly to build trust.</li>
-            </ul>
+            <div class="buttons">
+                <button onclick="scrollToSection('housing')">적절한 거주 공간 제공하기</button>
+                <button onclick="scrollToSection('food-water')">올바른 사료와 물 제공하기</button>
+                <button onclick="scrollToSection('cleaning')">정기적인 청소와 관리</button>
+                <button onclick="scrollToSection('health')">건강과 행동 체크</button>
+                <button onclick="scrollToSection('interaction')">소통과 관심을 통한 긍정적인 환경 제공하기</button>
+            </div>
+            <article id="housing">
+                <h3>적절한 거주 공간 제공하기</h3>
+                <ul>
+                    <li><strong>케이지 크기:</strong> 햄스터는 활동적인 동물이므로 충분한 공간이 필요합니다. 최소한의 케이지 크기는 60cm x 30cm x 30cm 이상이어야 합니다.</li>
+                    <li><strong>바닥재:</strong> 케이지 바닥에는 햄스터가 파묻고 탐험할 수 있는 박스 또는 패드를 놓아주세요.</li>
+                    <li><strong>햄스터 하우스:</strong> 햄스터는 자신만의 안전한 공간을 필요로 합니다. 작은 집이나 터널을 제공하여 햄스터가 숨을 수 있게 해주세요.</li>
+                </ul>
+            </article>
+            <article id="food-water">
+                <h3>올바른 사료와 물 제공하기</h3>
+                <ul>
+                    <li><strong>고급 사료:</strong> 햄스터는 곡류와 씨앗을 기본으로 하는 사료를 먹습니다. 전문적인 햄스터 사료를 구매하여 제공해주세요.</li>
+                    <li><strong>신선한 물:</strong> 항상 깨끗하고 신선한 물을 제공해주세요. 물병을 사용하여 물이 얼지 않도록 주의하세요.</li>
+                </ul>
+            </article>
+            <article id="cleaning">
+                <h3>정기적인 청소와 관리</h3>
+                <ul>
+                    <li><strong>케이지 청소:</strong> 매주 한 번은 케이지를 청소하고, 사용된 바닥재를 교체하세요.</li>
+                    <li><strong>햄스터 활동 장소:</strong> 햄스터는 매일 규칙적인 운동과 활동이 필요합니다. 햄스터가 탐험할 수 있는 활동장소를 제공해주세요.</li>
+                </ul>
+            </article>
+            <article id="health">
+                <h3>건강과 행동 체크</h3>
+                <ul>
+                    <li><strong>건강 검진:</strong> 햄스터의 건강을 유지하기 위해 정기적으로 수의사를 방문하세요.</li>
+                    <li><strong>행동 관찰:</strong> 햄스터의 일상적인 행동을 관찰하여 건강 문제나 스트레스 증상을 조기에 발견하세요.</li>
+                </ul>
+            </article>
+            <article id="interaction">
+                <h3>소통과 관심을 통한 긍정적인 환경 제공하기</h3>
+                <ul>
+                    <li><strong>손길과 대화:</strong> 햄스터가 사람에게 긍정적인 경험을 할 수 있도록 손길을 주고, 조용한 대화를 해주세요.</li>
+                    <li><strong>환경 조건:</strong> 햄스터의 주변 환경을 편안하게 유지하고, 급격한 온도 변화나 소음을 피해주세요.</li>
+                </ul>
+            </article>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Hamster Care Guide</p>
     </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>
