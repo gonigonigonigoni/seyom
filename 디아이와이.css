@@ -53,11 +53,12 @@ nav ul li a:hover {
 main {
     padding: 20px;
     max-width: 800px;
-    margin: 150px auto 20px auto; /* 헤더 높이 + 여백만큼 아래로 위치 */
-    background-color: white;
+    margin: 150px auto 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* 반투명 흰색 배경 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
+
 
 main h2 {
     color: hsla(34, 84%, 62%, 0.226);
