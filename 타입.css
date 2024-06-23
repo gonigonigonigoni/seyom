@@ -109,9 +109,10 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: fixed;
-    width: 99%;
+    width: 100%;
     bottom: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Sunflower', sans-serif;
 }
 
 /* 반응형 스타일 */
