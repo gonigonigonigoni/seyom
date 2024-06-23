@@ -3,40 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>햄스터 집사들을 위한 공간 !</title>
+    <title>햄스터 집사들을 위한 공간!</title>
     <link rel="stylesheet" href="홈스타일.css">
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <style>
         body {
             font-family: 'Sunflower', sans-serif;
         }
+
+        .image-slider {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .image-slider {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* 텍스트 폰트 크기 조정 */
+        section h2 {
+            font-size: 24px; /* h2의 폰트 크기 조정 */
+        
+        }
+        section p {
+            font-size: 15px; /* p 태그의 폰트 크기 조정 */
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>햄스터 집사들을 위한 공간!  </h1>
+        <h1>햄스터 집사들을 위한 공간!</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="types.html">Types of Hamsters</a></li>
                 <li><a href="care.html">Care Tips</a></li>
                 <li><a href="diy.html">DIY Toys</a></li>
-                
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Welcome to Hamster Care Guide</h2>
-            <p>Discover everything you need to know about taking care of your furry little friends. From different types of hamsters to health tips, we've got you covered.</p>
-            <div class="image-container">
-                <img src="https://i.namu.wiki/i/MmSNZEv4TguhJ-Sc5PVcQ3_HXSWPWAT9sBEQNNpv3Xv1E7qDtfzw2aqkIbsKH5xEwtpyLZl4v6jKLxtYF33sgw.webp" alt="Cute Hamster" class="featured-image">
+            <h2>햄스터 집사들을 위한 공간에 오신걸 환영합니다!</h2>
+            <p>안녕하세요!<br>이 곳은 햄스터를 키우거나 키울 예정인 분들에게 도움이 되게끔 정보를 담은 사이트입니다!</p>
+            <p>많은 정보들을 지속적으로 추가할 예정이니 많은 관심 부탁드립니다!</p>
+            <div class="image-slider">
+                <div><img src="https://i.namu.wiki/i/MmSNZEv4TguhJ-Sc5PVcQ3_HXSWPWAT9sBEQNNpv3Xv1E7qDtfzw2aqkIbsKH5xEwtpyLZl4v6jKLxtYF33sgw.webp" alt="Cute Hamster 1"></div>
+                <div><img src="https://i.pinimg.com/564x/c9/a6/35/c9a635d3edd9ae297b97d3013e896cca.jpg" alt="Cute Hamster 2"></div>
+                <div><img src="https://i.pinimg.com/564x/1c/f1/bc/1cf1bcd3d5617a02a4790454e3c73d4f.jpg" alt="Cute Hamster 3"></div>
             </div>
-            <iframe width="760" height="615" src="https://www.youtube.com/embed/rwjLBG7NPMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
         </section>
     </main>
     <footer>
-        
+        <!-- Footer content -->
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.image-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
 </body>
 </html>
