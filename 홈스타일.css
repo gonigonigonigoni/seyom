@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Sunflower:500');
 /* 기본 스타일 */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Sunflower', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f9fc;
@@ -26,6 +27,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
+    font-family: 'Sunflower', sans-serif;
 }
 
 nav ul {
@@ -43,6 +45,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Sunflower', sans-serif;
 }
 
 nav ul li a:hover {
@@ -57,6 +60,7 @@ main {
     background-color: rgba(255, 255, 255, 0.9); /* 반투명 흰색 배경 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    font-family: 'Sunflower', sans-serif;
 }
 
 
@@ -99,6 +103,7 @@ footer {
     width: 100%;
     bottom: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Sunflower', sans-serif;
 }
 
 /* 반응형 스타일 */
