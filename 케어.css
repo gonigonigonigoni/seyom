@@ -64,7 +64,7 @@ main {
     text-align: center; /* 중앙 정렬 */
 }
 article h3 {
-    color: hsla(34, 84%, 62%, 0.626); /* Change h3 text color */
+    color: hsla(34, 84%, 62%, 0.226); /* Change h3 text color */
     font-size: 20px;
     margin-top: 20px;
 }
@@ -80,7 +80,7 @@ article:first-child {
 }
 
 main h2 {
-    color: hsla(34, 84%, 62%, 0.226);
+    color: hsla(34, 84%, 62%, 0.626);
     font-size: 24px;
     margin-bottom: 10px;
 }
