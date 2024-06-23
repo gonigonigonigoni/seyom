@@ -6,146 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="케어.css">
     <title>Hamster Care Tips</title>
-    <style>
-        /* 기본 스타일 */
-        body {
-            font-family: 'Sunflower', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
-
-        /* 바탕화면 스타일 */
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* 헤더 스타일 */
-        header {
-            background-color: hsla(34, 84%, 62%, 0.226);
-            color: rgb(255, 255, 255);
-            padding: 10px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* 메인 컨텐츠 스타일 */
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 150px auto 20px auto; /* 헤더 높이 + 여백만큼 아래로 위치 */
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            
-        }
-
-        main h2 {
-            color: hsla(34, 84%, 62%, 0.226);
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        main p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .article-container {
-            padding: 20px;
-        }
-
-        article h3 {
-            color: hsla(34, 84%, 62%, 0.626);
-            font-size: 20px;
-            margin-top: 20px;
-        }
-
-        article ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 10px 0;
-        }
-
-        article ul li {
-            margin-bottom: 10px;
-        }
-
-        .buttons {
-            margin-bottom: 20px;
-        }
-
-        .buttons button {
-            background-color: hsla(34, 84%, 62%, 0.8);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .buttons button:hover {
-            background-color: hsla(34, 84%, 62%, 1);
-        }
-
-        /* 푸터 스타일 */
-        footer {
-            background-color: hsla(36, 100%, 82%, 0.973);
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        /* 반응형 스타일 */
-        @media (max-width: 600px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            main {
-                padding: 10px;
-                margin: 120px 10px 10px 10px; /* 작은 화면에서도 헤더 높이만큼 아래로 위치 */
-            }
-
-            .buttons button {
-                width: 100%;
-                margin: 5px 0;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -164,12 +24,13 @@
         <section>
             <h2>Hamster Care Tips</h2>
             <p>Learn how to take proper care of your hamster with our essential care tips.</p>
-            <div class="buttons">
-                <button onclick="scrollToSection('housing')">적절한 거주 공간 제공하기</button>
-                <button onclick="scrollToSection('food-water')">올바른 사료와 물 제공하기</button>
-                <button onclick="scrollToSection('cleaning')">정기적인 청소와 관리</button>
-                <button onclick="scrollToSection('health')">건강과 행동 체크</button>
-                <button onclick="scrollToSection('interaction')">소통과 관심을 통한 긍정적인 환경 제공하기</button>
+            <div class="image-container">
+                <!-- Images with onclick events -->
+                <img src="images/감자.png" alt="Housing" onclick="scrollToSection('housing')">
+                <img src="images/당무.png" alt="Food and Water" onclick="scrollToSection('food-water')">
+                <img src="images/콩.png" alt="Cleaning" onclick="scrollToSection('cleaning')">
+                <img src="images/당근.png" alt="Health" onclick="scrollToSection('health')">
+                <img src="images/토마.png" alt="Interaction" onclick="scrollToSection('interaction')">
             </div>
             <article id="housing">
                 <h3>적절한 거주 공간 제공하기</h3>
@@ -213,7 +74,20 @@
         <p>&copy; 2024 Hamster Care Guide</p>
     </footer>
     <script>
-        function scrollToSection(sectionId) {
+       function scrollToSection(sectionId) {
+            // 해당 sectionId에 해당하는 article 요소를 찾습니다.
+            var articles = document.querySelectorAll('article');
+            articles.forEach(function(article) {
+                // 해당 article의 id와 sectionId가 일치하면 보이게 처리합니다.
+                if (article.id === sectionId) {
+                    article.style.display = 'block';
+                } else {
+                    // 일치하지 않으면 숨깁니다.
+                    article.style.display = 'none';
+                }
+            });
+
+            // 스크롤 처리 - 해당 article의 위치로 스크롤링합니다.
             var section = document.getElementById(sectionId);
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });

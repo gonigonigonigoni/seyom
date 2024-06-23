@@ -61,6 +61,8 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: 'Sunflower', sans-serif;
+    text-align: center; /* 중앙 정렬 */
+    align-items: center; /* 중앙 정렬 */
 }
 
 
@@ -74,7 +76,19 @@ main p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
+article {
+    margin-bottom: 20px;
+}
 
+article img {
+    max-width: 100%; /* 이미지 너비 조정 */
+    border-radius: 10px; /* 라운드 처리 */
+    cursor: pointer; /* 포인터 커서 설정 */
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 .image-container {
     text-align: center;
 }

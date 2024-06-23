@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sunflower:500');
+
 /* 기본 스타일 */
 body {
     font-family: 'Sunflower', sans-serif;
@@ -6,6 +7,7 @@ body {
     padding: 0;
     background-color: #f7f9fc;
     color: #333;
+    text-align: center; /* 중앙 정렬 */
 }
 
 /* 바탕화면 스타일 */
@@ -27,7 +29,6 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
-    font-family: 'Sunflower', sans-serif;
 }
 
 nav ul {
@@ -45,7 +46,6 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Sunflower', sans-serif;
 }
 
 nav ul li a:hover {
@@ -56,13 +56,11 @@ nav ul li a:hover {
 main {
     padding: 20px;
     max-width: 800px;
-    margin: 150px auto 20px auto;
+    margin: 150px auto 20px auto; /* 헤더 높이 + 여백만큼 아래로 위치 */
     background-color: rgba(255, 255, 255, 0.9); /* 반투명 흰색 배경 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    font-family: 'Sunflower', sans-serif;
 }
-
 
 main h2 {
     color: hsla(34, 84%, 62%, 0.226);
@@ -77,12 +75,27 @@ main p {
 
 .image-container {
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .image-container img {
-    max-width: 50%; /* 이미지 크기를 줄입니다 */
+    max-width: 30%; /* 이미지 크기를 줄입니다 */
     border-radius: 8px;
-    margin: 20px 0;
+    cursor: pointer;
+}
+
+.hamster-info .hamster-image {
+    width: 100%; /* 이미지의 너비를 100%로 설정 */
+    max-width: 560px; /* 최대 너비를 560px로 제한 */
+    height: auto; /* 이미지의 높이는 자동으로 조정하여 비율 유지 */
+    display: block; /* 블록 요소로 표시하여 가로 중앙 정렬 용이 */
+    margin: 0 auto; /* 가로 중앙 정렬 */
+    border-radius: 8px; /* 둥근 모서리를 적용 */
+    margin-bottom: 20px; /* 하단 여백 추가 */
+}
+
 }
 
 iframe {
@@ -103,7 +116,6 @@ footer {
     width: 100%;
     bottom: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    font-family: 'Sunflower', sans-serif;
 }
 
 /* 반응형 스타일 */
@@ -120,6 +132,10 @@ footer {
 
     iframe {
         height: 300px;
+    }
+
+    .image-container {
+        flex-direction: column;
     }
 
     .image-container img {

@@ -62,7 +62,21 @@ main {
     border-radius: 8px;
     font-family: 'Sunflower', sans-serif;
 }
+article h3 {
+    color: hsla(34, 84%, 62%, 0.626); /* Change h3 text color */
+    font-size: 20px;
+    margin-top: 20px;
+}
 
+/* article 요소 초기에는 모두 숨기기 */
+article {
+    display: none;
+}
+
+/* 한 번에 하나의 article 요소만 보이게 하기 */
+article:first-child {
+    display: block; /* 첫 번째 article 요소는 초기에 보이게 설정 */
+}
 
 main h2 {
     color: hsla(34, 84%, 62%, 0.226);
@@ -74,7 +88,13 @@ main p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
+/* Adjust image sizes */
+.image-container img {
+    width: 130px; /* Set the width of each image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add margin between images */
+    cursor: pointer;
+}
 .image-container {
     text-align: center;
 }

@@ -6,113 +6,6 @@
     <title>Types of Hamsters</title>
     <link rel="stylesheet" href="타입.css">
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:500&display=swap" rel="stylesheet">
-    <style>
-        /* 기본 스타일 */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
-        /* 바탕화면 스타일 */
-        html, body {
-            width: 100%;
-            height: 100%;
-            background: url('images/맵방.jpeg') no-repeat center center fixed; /* 배경 이미지 추가 */
-            background-size: cover;
-        }
-        /* 헤더 스타일 */
-        header {
-            background-color: hsla(34, 84%, 62%, 0.226);
-            color: rgb(255, 255, 255);
-            padding: 10px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        /* 메인 컨텐츠 스타일 */
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 150px auto 20px auto; /* 헤더 높이 + 여백만큼 아래로 위치 */
-            background-color: rgba(255, 255, 255, 0.9); /* 반투명 흰색 배경 */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        main h2 {
-            color: hsla(34, 84%, 62%, 0.226);
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        main p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .image-container {
-            text-align: center;
-        }
-        .image-container img {
-            max-width: 50%; /* 이미지 크기를 줄입니다 */
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        iframe {
-            width: 100%;
-            height: 450px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: none;
-        }
-        /* 푸터 스타일 */
-        footer {
-            background-color: hsla(36, 100%, 82%, 0.973);
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-        /* 반응형 스타일 */
-        @media (max-width: 600px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-            main {
-                padding: 10px;
-                margin: 120px 10px 10px 10px; /* 작은 화면에서도 헤더 높이만큼 아래로 위치 */
-            }
-            iframe {
-                height: 300px;
-            }
-            .image-container img {
-                max-width: 80%; /* 작은 화면에서 이미지 크기를 늘립니다 */
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -128,45 +21,51 @@
         </nav>
     </header>
     <main>
-        <nav>
-            <ul>
-                <li><button onclick="scrollToSection('syrian')">골든햄스터</button></li>
-                <li><button onclick="scrollToSection('dwarf')">드워프햄스터</button></li>
-                <li><button onclick="scrollToSection('roborovski')">로보로프스키햄스터</button></li>
-            </ul>
-        </nav>
-        <section>
-            <h2>Types of Hamsters</h2>
-            <article id="syrian">
-                <h3>골든햄스터</h3>
-                <p>Syrian hamsters are the most popular pet hamster. They are known for their docile nature and come in a variety of colors.</p>
-                <img src="골든햄스터.jpg" alt="골든 햄스터영상">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
-            </article>
-            <article id="dwarf">
-                <h3>드워프햄스터</h3>
-                <p>Dwarf hamsters are smaller and more social than Syrian hamsters. They are very active and can live in pairs or groups.</p>
-                <img src="드워프햄스터.jpg" alt="드워프 햄스터영상">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
-            </article>
-            <article id="roborovski">
-                <h3>로보로프스키햄스터</h3>
-                <p>Roborovski hamsters are the smallest and fastest hamsters. They are very entertaining to watch but can be more challenging to handle.</p>
-                <img src="로보로프스키햄스터.jpg" alt="로보로프스키 햄스터영상">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
-            </article>
+        <h2>Types of Hamsters</h2>
+        <div class="image-container">
+            <img src="images/골든햄스터.jpg" alt="골든 햄스터" onclick="showInfo('syrian')">
+            <img src="images/드워프햄스터.jpg" alt="드워프 햄스터" onclick="showInfo('dwarf')">
+            <img src="images/로보로브스키햄스터.jpg" alt="로보로프스키 햄스터" onclick="showInfo('roborovski')">
+        </div>
+        <section id="syrian" class="hamster-info">
+            <h3>골든햄스터</h3>
+            <p>Syrian hamsters are the most popular pet hamster. They are known for their docile nature and come in a variety of colors.</p>
+            <img src="images/골든햄스터.jpg" alt="골든 햄스터 사진" class="hamster-image">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rwjLBG7NPMg?si=JyCJrNv-0XJTRtfB" frameborder="0" allowfullscreen></iframe>
         </section>
+        
+        <section id="dwarf" class="hamster-info">
+            <h3>드워프햄스터</h3>
+            <p>Dwarf hamsters are smaller and more social than Syrian hamsters. They are very active and can live in pairs or groups.</p>
+            <img src="images/드워프햄스터.jpg" alt="드워프 햄스터 사진" class="hamster-image">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+        </section>
+        
+        <section id="roborovski" class="hamster-info">
+            <h3>로보로프스키햄스터</h3>
+            <p>Roborovski hamsters are the smallest and fastest hamsters. They are very entertaining to watch but can be more challenging to handle.</p>
+            <img src="images/로보로브스키햄스터.jpg" alt="로보로프스키 햄스터 사진" class="hamster-image">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+        </section>
+        
     </main>
     <footer>
-        <p>&copy; 2024 Hamster Care Guide</p>
+        
     </footer>
     <script>
-        function scrollToSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
+        function showInfo(hamsterType) {
+            document.querySelectorAll('.hamster-info').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(hamsterType).style.display = 'block';
         }
+
+        // 페이지 로드 시 모든 섹션 숨기기
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.hamster-info').forEach(section => {
+                section.style.display = 'none';
+            });
+        });
     </script>
 </body>
 </html>
